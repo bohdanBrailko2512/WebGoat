@@ -142,7 +142,7 @@ public class GeneralLessonIntegrationTest extends IntegrationTest {
         Map<String, Object> params = new HashMap<>();
         params.clear();
         params.put("username", "CaptainJack");
-        params.put("password", "BlackPearl");
+        params.put("password", System.getenv("WEBGOAT_TEST_PASSWORD"));
         checkAssignment(webGoatUrlConfig.url("InsecureLogin/task"), params, true);
         checkResults("InsecureLogin");
     }
